@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
+        <meta name="keywords" content="写作,">
+        <meta name="description" content="小故事（一）">
+        <title>小故事（一）</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/">
+    <img class="logo" src="/images/avatar.png" />
+    Seven
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/tag.html">标签</a></li>
+      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">小故事（一）</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/images/avatar.png);"></span>
+                    <a class="name" href="/about.me.html">SEVEN</a>
+                    
+                    <span class="date" data-time="1470286860"><span class="from"></span> 更新</span>
+                    
+                    <span class="tags"><a class="tag" href="/tag/%e5%86%99%e4%bd%9c/index.html">写作</a></span>
+                </section>
+                <article class="content"><p>喝的微醉，自个儿端着罐装的雪花啤酒，从阳台看校园里的形形色色。他一手拎着超市的购物袋，一手牵着女友的手向着女生宿舍方向走去。<p>
+   他是我大学为数不多的几个朋友。<p>
+   他喜欢别的专业的一个妹纸。<p>
+   知道妹纸喜欢吃食堂的鸡蛋饼，他就一直在档口前等着妹纸过来买鸡蛋饼。<p>
+   但他不敢表白，每天只是愣愣的看着。看着她从门口进来，排队。<p>
+   好几次了我对他说：喜欢就去追啊。这都什么年代了。直接上去问号码，问有没有对象。这样才能进行下一步计划啊。<p>
+   应该是没有对象的，我都打听了。<p>
+   那你还不去和人家妹纸要号码。不交流怎么追？<p>
+   太不好意思了。没胆。要是被拒绝多尴尬。<p>
+   你要知道你不追，别人也会追。到时候名花有主你就哭去吧。<p></p>
+
+<p>可能被我的话刺激到，他竟开始慢慢开始找机会去认识那个妹纸。<p>
+   有一次打完球去食堂，竟发现他们在一起吃饭。我也是瞬间觉得这个傻子什么时候撩妹这么厉害了。进步神速。才认识没几天就约出来吃饭了。 <p>
+   桥段很老但是很好用。<p>
+   我问他在一起了吗。<p>
+   没有。但是这样也挺好的。很满足。<p>
+   那你们这些算什么？ <p>
+   别说了。我觉得挺好的。<p>
+ &hellip;&hellip;&hellip;.
+   之后一天晚上。我睡不着上厕所。发现他在阳台。<p>
+   能给我一根烟吗？<p>
+   你不是从来不碰这个？<p>
+   有点心烦。就想抽烟。<p>
+   给。<p>
+   他接过我给的烟。看他拙劣的点烟动作，深吸了一口，又被呛得咳嗽。不经意有点觉得他有很多话想说。<p>
+   咋了？吵架了？<p>
+   我表白了。但是她和别人在一起了。 <p>
+   什么狗血剧情？ <p>
+   别问。我就是个傻逼。我根本感动不了别人。从头到尾都是在感动自己。<p>
+   看着他一口吸烟又呛的厉害的咳嗽。从未想过他是花了多少的感情在上面。<p>
+   这可能是我大学最认真的一次恋爱了。我睡了。<p>
+   他看着我说到。 之后便转身回床上睡觉了。<p>
+   我突然想到苏芩一句很经典的话：<p>
+   &gt; 等不起的人就不要等了，你的痴情感动不了一个不爱你的人。伤害你的不是对方的绝情，而是你心存幻想的坚持。勇敢点，转个身。你必须放弃一些东西，才能获得更圆满的自己。</p>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/images/avatar.png);"></div>
+                    <a class="name" href="/about.me.html">SEVEN</a>
+                    <div class="intro">GEEK。APPLE FAN。</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/dns.html">DNS抗污染</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/kexueshangwang.html">科学上网</a>
+                    </section>
+                    
+                </section>
+                
+    <section id="disqus_thread"></section>
+    <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//seven_zhou.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        Seven ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="http://www.inkpaper.io/" target="_blank">Ink</a></span>
+</footer>
+
+        <script src="/bundle/index.js"></script>
+    </body>
+</html>

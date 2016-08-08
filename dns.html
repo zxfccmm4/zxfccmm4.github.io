@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
+        <meta name="keywords" content="geek,">
+        <meta name="description" content="DNS抗污染">
+        <title>DNS抗污染</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/">
+    <img class="logo" src="/images/avatar.png" />
+    Seven
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/tag.html">标签</a></li>
+      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">DNS抗污染</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/images/avatar.png);"></span>
+                    <a class="name" href="/about.me.html">SEVEN</a>
+                    
+                    <span class="date" data-time="1470286860"><span class="from"></span> 更新</span>
+                    
+                    <span class="tags"><a class="tag" href="/tag/geek/index.html">geek</a></span>
+                </section>
+                <article class="content"><p>在文章开头,我想说的是,如果你在意你的数据隐私,请尽量选择大牌DNS如阿里,114等.</p>
+
+<p>逗bi家中使用的是广电网络,体验太差,各种问题,所以与其给客服打电话,还不如手动解决此问题!</p>
+
+<p>如果您使用的是电信/联通/移动网络,请按照当地运营商DNS为首要,不到迫不得已请不要更改DNS,不到迫不得已请不要更改DNS,不到迫不得已请不要更改DNS!!</p>
+
+<h2>DNS地址分享</h2>
+
+<p>腾讯:<p>
+ - 119.29.29.29<p>
+阿里:<p>
+ - 223.6.6.6<p>
+ - 223.5.5.5<p>
+ - 114.114.114.114<p></p>
+
+<p>Urns - 具备抗污染/具备科学网<p>
+ - 218.59.181.182<p>
+ - 115.159.157.26<p>
+ - 115.159.158.38<p></p>
+
+<p>OneDNS - 具备抗污染/广告/加速<p>
+南方首选:<p>
+ - 112.124.47.27O<p>
+北方首选:<p>
+ - 114.215.126.16</p>
+
+<p>其中Urns具备：<p>
+support: wikipedia,google,facebook,twitter,instagram,soundcloud<p></p>
+
+<ul>
+<li><p>飞速
+服务器位于国内，响应迅速，热门网站，60ms内解析完成。</p></li>
+
+<li><p>精确
+虽位于国内，但不失精确，正确解析国外网站</p></li>
+
+<li><p>干净
+上游DNS仅为全球13台DNS根服务器，干净无劫持，远离无良运营商</p></li>
+
+<li><p>安全
+采用全球流行的DNS服务软件：BIND，稳定安全却不失优雅</p></li>
+</ul>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/images/avatar.png);"></div>
+                    <a class="name" href="/about.me.html">SEVEN</a>
+                    <div class="intro">GEEK。APPLE FAN。</div>
+                </section>
+                <section class="recommend">
+                    
+                    
+                    <section class="nav next">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/xiaogushi.html">小故事（一）</a>
+                    </section>
+                    
+                </section>
+                
+    <section id="disqus_thread"></section>
+    <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//seven_zhou.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        Seven ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="http://www.inkpaper.io/" target="_blank">Ink</a></span>
+</footer>
+
+        <script src="/bundle/index.js"></script>
+    </body>
+</html>
